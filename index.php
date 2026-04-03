@@ -17,7 +17,7 @@ $tasks = $query->fetchAll();
 <body>
     <div class="container">
         <h1>My Tasks</h1>
-        <a href="create.php" class="btn btn-add">Add New Task</a>
+        <a href="add.php" class="btn btn-add">Add New Task</a>
         
         <table>
             <thead>
@@ -43,7 +43,7 @@ $tasks = $query->fetchAll();
                             <td><?php echo htmlspecialchars($task['created_at']); ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $task['id']; ?>" class="btn btn-edit">Edit</a>
-                                <a href="delete.php?id=<?php echo $task['id']; ?>" class="btn btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
+                                <a href="suppression.php?id=<?php echo $task['id']; ?>" class="btn btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
